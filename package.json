@@ -1,0 +1,102 @@
+{
+  "name": "@bonfida/sns-widget",
+  "version": "0.2.0",
+  "description": "SNS Widget for 3rd-party apps for quick domain search and register",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bonfida/sns-widget.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "tailwind.config.js"
+  ],
+  "type": "module",
+  "main": "dist/sns-widget.mjs",
+  "module": "dist/sns-widget.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./style.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/sns-widget.mjs",
+      "require": "./dist/sns-widget.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Bonfida/sns-widget/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --mode lib",
+    "build:preview": "tsc && vite build --mode preview",
+    "deploy:preview": "node ./publish.github-pages.js",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "analyse": "vite-bundle-visualizer"
+  },
+  "peerDependencies": {
+    "@pythnetwork/client": "^2.19.0",
+    "@solana/wallet-adapter-react": "^0.15",
+    "@solana/wallet-adapter-react-ui": "^0.9",
+    "@solana/wallet-adapter-wallets": "^0.19.23",
+    "@solana/web3.js": "^1.87.6",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@foxwallet/wallet-adapter-foxwallet": "^0.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "prettier": "3.1.0",
+    "rollup-plugin-banner2": "^1.2.2",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.2",
+    "vite": "^4.5.0",
+    "vite-bundle-visualizer": "^0.11.0",
+    "vite-plugin-dts": "^3.6.4",
+    "vite-plugin-node-polyfills": "^0.17.0"
+  },
+  "dependencies": {
+    "@bonfida/emojis": "^1.0.4",
+    "@bonfida/sns-react": "^2.0.2",
+    "@bonfida/spl-name-service": "2.5.0",
+    "@pythnetwork/client": "^2.19.0",
+    "@solana/wallet-adapter-react": "^0.15",
+    "@solana/wallet-adapter-react-ui": "^0.9",
+    "@solana/wallet-adapter-wallets": "^0.19.23",
+    "@solana/web3.js": "^1.87.6",
+    "ahooks": "^3.7.8",
+    "react-async-hook": "^4.0.0"
+  },
+  "volta": {
+    "node": "20.9.0"
+  },
+  "author": "letehaha",
+  "license": "MIT",
+  "keywords": [
+    "sns",
+    "solana-name-service",
+    "domain-purchase",
+    "domain-registration",
+    "bonfida",
+    "solana",
+    "web3",
+    "web3-domains",
+    "widget"
+  ]
+}
